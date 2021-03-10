@@ -1,0 +1,10 @@
+name: converter
+version: 0.1.0
+description: A Dart library
+repository: https://github.com/dkin-om/converter-dart.git
+issue_tracker: https://github.com/dkin-om/converter-dart/issues
+homepage: https://github.com/dkin-om/converter-dart#readme
+environment:
+  sdk: '>=2.8.1 <3.0.0'
+dev_dependencies:
+  test: ^1.14.4
