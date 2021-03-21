@@ -1,10 +1,13 @@
 name: converter
-version: 0.1.0
-description: A Dart library
+version: 0.2.0-nullsafety.0
+description: A Dart library for converting between different units of measurement for various quantities
 repository: https://github.com/dkin-om/converter-dart.git
 issue_tracker: https://github.com/dkin-om/converter-dart/issues
 homepage: https://github.com/dkin-om/converter-dart#readme
 environment:
-  sdk: '>=2.8.1 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
+dependencies:
+  equatable: ^2.0.0
+  invertible: ^2.0.0
 dev_dependencies:
   test: ^1.14.4
