@@ -10,6 +10,7 @@ import 'quantities/speed_testcase.dart';
 
 void main() {
   testAdditions();
+  testSubtractions();
   testConverters();
 }
 
@@ -19,6 +20,16 @@ void testAdditions() {
 
     test('sum.magnitudeInSI -> ${testCase[2]}', () {
       expect(sum.magnitudeInSI, fractionalCloseTo(testCase[2], 1e-6));
+    });
+  });
+}
+
+void testSubtractions() {
+  subtractTestCases.forEach((List<dynamic> testCase) {
+    final Quantity<dynamic> difference = testCase[0] - testCase[1];
+
+    test('difference.magnitudeInSI -> ${testCase[2]}', () {
+      expect(difference.magnitudeInSI, fractionalCloseTo(testCase[2], 1e-6));
     });
   });
 }

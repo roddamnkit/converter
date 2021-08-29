@@ -1,5 +1,5 @@
 name: converter
-version: 0.2.0-nullsafety.0
+version: 0.2.0
 description: A Dart library for converting between different units of measurement for various quantities
 repository: https://github.com/dkin-om/converter-dart.git
 issue_tracker: https://github.com/dkin-om/converter-dart/issues
