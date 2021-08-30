@@ -3,15 +3,12 @@ import 'base_unit.dart';
 
 /// Superclass of all base quantities
 abstract class BaseQuantity<BQ extends BaseQuantity<BQ>> extends Quantity<BQ> {
-  /// Constructs a base quantity with the magnitude and the unit
-  BaseQuantity(
-      num magnitude, String unitSymbol, BaseDimension<BQ> baseDimension)
-      : this.si(
-            baseDimension.convert(magnitude, from: unitSymbol), baseDimension);
+  /// Constructs a base quantity with the value and the unit
+  BaseQuantity(num value, String unitSymbol, BaseDimension<BQ> baseDimension)
+      : this.si(baseDimension.convert(value, from: unitSymbol), baseDimension);
 
-  /// Constructs a base quantity with the magnitude in SI base unit
-  const BaseQuantity.si(num magnitudeInSI, this.baseDimension)
-      : super.si(magnitudeInSI);
+  /// Constructs a base quantity with the value in SI base unit
+  const BaseQuantity.si(num siValue, this.baseDimension) : super.si(siValue);
 
   /// Base dimension of this quantity
   final BaseDimension<BQ> baseDimension;
@@ -20,11 +17,11 @@ abstract class BaseQuantity<BQ extends BaseQuantity<BQ>> extends Quantity<BQ> {
   Dimension<BQ> get dimension => Dimension.base(baseDimension);
 
   @override
-  List<Object> get props => <Object>[magnitudeInSI, baseDimension];
+  List<Object> get props => <Object>[siValue, baseDimension];
 
   @override
-  num magnitudeIn(String unitSymbol) =>
-      baseDimension.convert(magnitudeInSI, to: unitSymbol);
+  num valueIn(String unitSymbol) =>
+      baseDimension.convert(siValue, to: unitSymbol);
 }
 
 /// Superclass of all base quantities' dimensions
@@ -45,17 +42,15 @@ abstract class BaseDimension<BQ extends BaseQuantity<BQ>> {
   /// All base units with symbols
   final Map<String, BaseUnit> allUnits;
 
-  /// Converts [magnitude] between different base units
+  /// Converts [value] between different base units
   num convert(
-    num magnitude, {
+    num value, {
     String? from,
     String? to,
   }) {
-    final num magnitudeInSI =
-        from != null ? unit(from).toSI(magnitude) : magnitude;
-    final num magnitude2 =
-        to != null ? unit(to).fromSI(magnitudeInSI) : magnitudeInSI;
-    return magnitude2;
+    final num siValue = from != null ? unit(from).toSI(value) : value;
+    final num value2 = to != null ? unit(to).fromSI(siValue) : siValue;
+    return value2;
   }
 
   /// Returns base unit with symbol
@@ -68,8 +63,8 @@ abstract class BaseDimension<BQ extends BaseQuantity<BQ>> {
     }
   }
 
-  /// Creates a base quantity with the magnitude in SI base unit
-  BQ si(num magnitudeInSI);
+  /// Creates a base quantity with the value in SI base unit
+  BQ si(num siValue);
 
   @override
   String toString() => symbol;

@@ -8,12 +8,11 @@ import 'unit.dart';
 
 /// Represents quantity Speed
 class Speed extends Quantity<Speed> {
-  /// Constructs Speed with the magnitude and the unit
-  Speed(num magnitude, String unitSymbol)
-      : super(magnitude, unitSymbol, _S._dimension);
+  /// Constructs Speed with the value and the unit
+  Speed(num value, String unitSymbol) : super(value, unitSymbol, _S._dimension);
 
-  /// Constructs Speed with the magnitude in SI unit
-  const Speed.si(num magnitudeInSI) : super.si(magnitudeInSI, _S._dimension);
+  /// Constructs Speed with the value in SI unit
+  const Speed.si(num siValue) : super.si(siValue, _S._dimension);
 }
 
 class _S extends Dimension<Speed> {
@@ -57,7 +56,7 @@ class _S extends Dimension<Speed> {
         );
 
   @override
-  Speed si(num magnitudeInSI) => Speed.si(magnitudeInSI);
+  Speed si(num siValue) => Speed.si(siValue);
 
   static const _S _dimension = _S._internal();
 }

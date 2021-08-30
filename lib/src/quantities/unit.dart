@@ -19,9 +19,9 @@ class Unit {
 
   final List<InvertibleRealFunction>? _toSI;
 
-  /// Returns function which converts a given magnitude from this unit to SI unit
+  /// Returns function which converts a given value from this unit to SI unit
   InvertibleRealFunction? get toSI => _toSI?.compose();
 
-  /// Returns function which converts a given magnitude from SI unit to this unit
+  /// Returns function which converts a given value from SI unit to this unit
   InvertibleRealFunction? get fromSI => _toSI?.inverse();
 }

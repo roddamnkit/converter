@@ -8,15 +8,15 @@ import 'unit.dart';
 
 /// Superclass of all quantities
 abstract class Quantity<Q extends Quantity<Q>> with EquatableMixin {
-  /// Constructs a quantity with the magnitude and the unit
-  Quantity(num magnitude, String unitSymbol, Dimension<Q> dimension)
-      : this.si(dimension.convert(magnitude, from: unitSymbol), dimension);
+  /// Constructs a quantity with the value and the unit
+  Quantity(num value, String unitSymbol, Dimension<Q> dimension)
+      : this.si(dimension.convert(value, from: unitSymbol), dimension);
 
-  /// Constructs a quantity with the magnitude in SI unit
-  const Quantity.si(this.magnitudeInSI, [this._dimension]);
+  /// Constructs a quantity with the value in SI unit
+  const Quantity.si(this.siValue, [this._dimension]);
 
-  /// magnitude in SI unit of this quantity
-  final num magnitudeInSI;
+  /// value in SI unit of this quantity
+  final num siValue;
 
   final Dimension<Q>? _dimension;
 
@@ -24,23 +24,22 @@ abstract class Quantity<Q extends Quantity<Q>> with EquatableMixin {
   Dimension<Q> get dimension => _dimension!;
 
   @override
-  List<Object> get props => <Object>[magnitudeInSI, dimension];
+  List<Object> get props => <Object>[siValue, dimension];
 
-  /// Returns the magnitude of this quantity in [unitSymbol] unit
-  num magnitudeIn(String unitSymbol) =>
-      dimension.convert(magnitudeInSI, to: unitSymbol);
+  /// Returns the value of this quantity in [unitSymbol] unit
+  num valueIn(String unitSymbol) => dimension.convert(siValue, to: unitSymbol);
 
   /// Add operator
-  Q operator +(Q q) => dimension.si(magnitudeInSI + q.magnitudeInSI);
+  Q operator +(Q q) => dimension.si(siValue + q.siValue);
 
   /// Subtract operator
-  Q operator -(Q q) => dimension.si(magnitudeInSI - q.magnitudeInSI);
+  Q operator -(Q q) => dimension.si(siValue - q.siValue);
 
   /// Greater than operator
-  bool operator >(Q q) => magnitudeInSI > q.magnitudeInSI;
+  bool operator >(Q q) => siValue > q.siValue;
 
   /// Less than operator
-  bool operator <(Q q) => magnitudeInSI < q.magnitudeInSI;
+  bool operator <(Q q) => siValue < q.siValue;
 
   /// Greater than or equal operator
   bool operator >=(Q q) => this > q || this == q;
@@ -49,7 +48,7 @@ abstract class Quantity<Q extends Quantity<Q>> with EquatableMixin {
   bool operator <=(Q q) => this < q || this == q;
 
   @override
-  String toString() => '$magnitudeInSI $dimension';
+  String toString() => '$siValue $dimension';
 }
 
 /// Superclass of all quantities' dimensions
@@ -75,18 +74,18 @@ abstract class Dimension<Q extends Quantity<Q>> {
   /// All units with symbols
   final Map<String, Unit> allUnits;
 
-  /// Converts [magnitude] between different units
+  /// Converts [value] between different units
   num convert(
-    num magnitude, {
+    num value, {
     String? from,
     String? to,
   }) {
-    final num magnitudeInSI;
+    final num siValue;
     if (from != null) {
       final Unit fromUnit = unit(from);
       final InvertibleRealFunction? toSI = fromUnit.toSI;
       if (toSI != null) {
-        magnitudeInSI = toSI(magnitude);
+        siValue = toSI(value);
       } else {
         num factor = 1;
         dimension.forEach((BaseDimension<dynamic> baseDimension, num exponent) {
@@ -95,31 +94,31 @@ abstract class Dimension<Q extends Quantity<Q>> {
           factor *=
               pow(baseDimension.convert(1, from: baseUnitSymbol), exponent);
         });
-        magnitudeInSI = factor * magnitude;
+        siValue = factor * value;
       }
     } else {
-      magnitudeInSI = magnitude;
+      siValue = value;
     }
 
-    final num magnitude2;
+    final num value2;
     if (to != null) {
       final Unit toUnit = unit(to);
       final InvertibleRealFunction? fromSI = toUnit.fromSI;
       if (fromSI != null) {
-        magnitude2 = fromSI(magnitudeInSI);
+        value2 = fromSI(siValue);
       } else {
         num factor = 1;
         dimension.forEach((BaseDimension<dynamic> baseDimension, num exponent) {
           final String baseUnitSymbol = toUnit.baseUnitSymbols[baseDimension]!;
           factor *= pow(baseDimension.convert(1, to: baseUnitSymbol), exponent);
         });
-        magnitude2 = factor * magnitudeInSI;
+        value2 = factor * siValue;
       }
     } else {
-      magnitude2 = magnitudeInSI;
+      value2 = siValue;
     }
 
-    return magnitude2;
+    return value2;
   }
 
   /// Returns unit with symbol
@@ -132,16 +131,16 @@ abstract class Dimension<Q extends Quantity<Q>> {
     }
   }
 
-  /// Creates a quantity with the magnitude in SI unit
-  Q si(num magnitudeInSI);
+  /// Creates a quantity with the value in SI unit
+  Q si(num siValue);
 
   @override
   String toString() => '$dimension';
 }
 
-///
+/// Superclass of all dimensionless quantities' dimensions
 abstract class Dimensionless<Q extends Quantity<Q>> extends Dimension<Q> {
-  ///
+  /// Constructs a dimensionless quantity's dimension
   const Dimensionless({
     String siUnitSymbol = '',
     Map<String, Unit> allUnits = const <String, Unit>{},
@@ -163,5 +162,5 @@ class _BaseDimensionImpl<BQ extends BaseQuantity<BQ>> extends Dimension<BQ> {
   final BaseDimension<BQ> baseDimension;
 
   @override
-  BQ si(num magnitudeInSI) => baseDimension.si(magnitudeInSI);
+  BQ si(num siValue) => baseDimension.si(siValue);
 }

@@ -16,8 +16,8 @@ final Length l1 = Length(2, 'm'); // 2 metres
 final Length l2 = Length(37, 'cm'); // 37 centimetres
 final Length l3 = Length(3.7, 'dm'); // 3.7 decimetres
 
-final num l2MagnitudeInInches = l2.magnitudeIn('in');
-// l2MagnitudeInInches ~= 14.566929
+final num l2ValueInInches = l2.valueIn('in');
+// l2ValueInInches ~= 14.566929
 
 final Length sum = l1 + l2;
 // sum == 2370 millimetres
@@ -101,6 +101,10 @@ final bool l1LTEl2 = l1 <= l2;
 - `ft2` - square foot
 - `mi2` - square mile
 - `ac` - acre
+
+### `SolidAngle`
+- `sr` - steradian (**SI**)
+- `deg2` - square degree
 
 ### `Speed`
 - `m/s` - metre per second (**SI**)

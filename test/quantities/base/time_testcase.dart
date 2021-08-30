@@ -4,8 +4,8 @@ final Map<String, dynamic> timeConverter = <String, dynamic>{
   'testCases': <Map<String, dynamic>>[
     <String, dynamic>{
       'quantity': Time.si(17),
-      'magnitudeInSI': 17,
-      'magnitudeIn': <String, num>{
+      'siValue': 17,
+      'valueIn': <String, num>{
         's': 17,
         'ds': 170,
         'cs': 1700,
@@ -30,8 +30,8 @@ final Map<String, dynamic> timeConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Time(19, 'ns'),
-      'magnitudeInSI': 1.9e-8,
-      'magnitudeIn': <String, num>{
+      'siValue': 1.9e-8,
+      'valueIn': <String, num>{
         's': 1.9e-8,
         'ds': 1.9e-7,
         'cs': 1.9e-6,
@@ -56,8 +56,8 @@ final Map<String, dynamic> timeConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Time(23, 'Gs'),
-      'magnitudeInSI': 2.3e10,
-      'magnitudeIn': <String, num>{
+      'siValue': 2.3e10,
+      'valueIn': <String, num>{
         's': 2.3e10,
         'ds': 2.3e11,
         'cs': 2.3e12,

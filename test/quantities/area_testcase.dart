@@ -4,8 +4,8 @@ final Map<String, dynamic> areaConverter = <String, dynamic>{
   'testCases': <Map<String, dynamic>>[
     <String, dynamic>{
       'quantity': Area.si(49),
-      'magnitudeInSI': 49,
-      'magnitudeIn': <String, num>{
+      'siValue': 49,
+      'valueIn': <String, num>{
         'm2': 49,
         'dm2': 4900,
         'cm2': 4.9e5,
@@ -24,8 +24,8 @@ final Map<String, dynamic> areaConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Area(121, 'µm2'),
-      'magnitudeInSI': 1.21e-10,
-      'magnitudeIn': <String, num>{
+      'siValue': 1.21e-10,
+      'valueIn': <String, num>{
         'm2': 1.21e-10,
         'dm2': 1.21e-8,
         'cm2': 1.21e-6,
@@ -44,8 +44,8 @@ final Map<String, dynamic> areaConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Area(169, 'Mm2'),
-      'magnitudeInSI': 1.69e14,
-      'magnitudeIn': <String, num>{
+      'siValue': 1.69e14,
+      'valueIn': <String, num>{
         'm2': 1.69e14,
         'dm2': 1.69e16,
         'cm2': 1.69e18,

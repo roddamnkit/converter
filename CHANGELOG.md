@@ -1,3 +1,9 @@
+## 0.3.0
+
+- Changed `magnitude` to `value`
+- Added quantities
+  - `SolidAngle`
+
 ## 0.2.0
 
 - Development null safety release

@@ -6,6 +6,7 @@ import 'quantities/base/length_testcase.dart';
 import 'quantities/base/temperature_testcase.dart';
 import 'quantities/base/time_testcase.dart';
 import 'quantities/quantity_testcase.dart';
+import 'quantities/solid_angle_testcase.dart';
 import 'quantities/speed_testcase.dart';
 
 void main() {
@@ -18,8 +19,8 @@ void testAdditions() {
   addTestCases.forEach((List<dynamic> testCase) {
     final Quantity<dynamic> sum = testCase[0] + testCase[1];
 
-    test('sum.magnitudeInSI -> ${testCase[2]}', () {
-      expect(sum.magnitudeInSI, fractionalCloseTo(testCase[2], 1e-6));
+    test('sum.siValue -> ${testCase[2]}', () {
+      expect(sum.siValue, fractionalCloseTo(testCase[2], 1e-6));
     });
   });
 }
@@ -28,8 +29,8 @@ void testSubtractions() {
   subtractTestCases.forEach((List<dynamic> testCase) {
     final Quantity<dynamic> difference = testCase[0] - testCase[1];
 
-    test('difference.magnitudeInSI -> ${testCase[2]}', () {
-      expect(difference.magnitudeInSI, fractionalCloseTo(testCase[2], 1e-6));
+    test('difference.siValue -> ${testCase[2]}', () {
+      expect(difference.siValue, fractionalCloseTo(testCase[2], 1e-6));
     });
   });
 }
@@ -40,6 +41,7 @@ void testConverters() {
   testConverter(timeConverter);
 
   testConverter(areaConverter);
+  testConverter(solidAngleConverter);
   testConverter(speedConverter);
 }
 
@@ -48,15 +50,13 @@ void testConverter(Map<String, dynamic> converter) {
     final dynamic quantity = testCase['quantity'];
 
     group('$quantity', () {
-      test('magnitudeInSI -> ${testCase['magnitudeInSI']}', () {
-        expect(quantity.magnitudeInSI,
-            fractionalCloseTo(testCase['magnitudeInSI'], 1e-6));
+      test('siValue -> ${testCase['siValue']}', () {
+        expect(quantity.siValue, fractionalCloseTo(testCase['siValue'], 1e-6));
       });
 
-      testCase['magnitudeIn'].forEach((String unitSymbol, num magnitude) {
-        test('magnitudeIn($unitSymbol) -> $magnitude', () {
-          expect(quantity.magnitudeIn(unitSymbol),
-              fractionalCloseTo(magnitude, 1e-6));
+      testCase['valueIn'].forEach((String unitSymbol, num value) {
+        test('valueIn($unitSymbol) -> $value', () {
+          expect(quantity.valueIn(unitSymbol), fractionalCloseTo(value, 1e-6));
         });
       });
     });

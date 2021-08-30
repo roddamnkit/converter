@@ -4,8 +4,8 @@ final Map<String, dynamic> lengthConverter = <String, dynamic>{
   'testCases': <Map<String, dynamic>>[
     <String, dynamic>{
       'quantity': Length.si(2),
-      'magnitudeInSI': 2,
-      'magnitudeIn': <String, num>{
+      'siValue': 2,
+      'valueIn': <String, num>{
         'm': 2,
         'dm': 20,
         'cm': 200,
@@ -27,8 +27,8 @@ final Map<String, dynamic> lengthConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Length(3, 'nm'),
-      'magnitudeInSI': 3e-9,
-      'magnitudeIn': <String, num>{
+      'siValue': 3e-9,
+      'valueIn': <String, num>{
         'm': 3e-9,
         'dm': 3e-8,
         'cm': 3e-7,
@@ -50,8 +50,8 @@ final Map<String, dynamic> lengthConverter = <String, dynamic>{
     },
     <String, dynamic>{
       'quantity': Length(5, 'Gm'),
-      'magnitudeInSI': 5e9,
-      'magnitudeIn': <String, num>{
+      'siValue': 5e9,
+      'valueIn': <String, num>{
         'm': 5e9,
         'dm': 5e10,
         'cm': 5e11,

@@ -5,13 +5,12 @@ import 'base_unit.dart';
 
 /// Represents base quantity Temperature
 class Temperature extends BaseQuantity<Temperature> {
-  /// Constructs Temperature with the magnitude and the unit
-  Temperature(num magnitude, String unitSymbol)
-      : super(magnitude, unitSymbol, Th.dimension);
+  /// Constructs Temperature with the value and the unit
+  Temperature(num value, String unitSymbol)
+      : super(value, unitSymbol, Th.dimension);
 
-  /// Constructs Temperature with the magnitude in SI base unit
-  const Temperature.si(num magnitudeInSI)
-      : super.si(magnitudeInSI, Th.dimension);
+  /// Constructs Temperature with the value in SI base unit
+  const Temperature.si(num siValue) : super.si(siValue, Th.dimension);
 }
 
 ///
@@ -48,7 +47,7 @@ class Th extends BaseDimension<Temperature> {
         );
 
   @override
-  Temperature si(num magnitudeInSI) => Temperature.si(magnitudeInSI);
+  Temperature si(num siValue) => Temperature.si(siValue);
 
   ///
   static const Th dimension = Th._internal();

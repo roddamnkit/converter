@@ -9,16 +9,16 @@ void length() {
   final Length l2 = Length(37, 'cm'); // 37 centimetres
   final Length l3 = Length(3.7, 'dm'); // 3.7 decimetres
 
-  final num l2MagnitudeInInches = l2.magnitudeIn('in');
-  print('37 centimetres is $l2MagnitudeInInches inches'); // 14.566929
+  final num l2ValueInInches = l2.valueIn('in');
+  print('37 centimetres is $l2ValueInInches inches'); // 14.566929
 
   final Length sum = l1 + l2;
   print(
-      '2 metres + 37 centimetres is ${sum.magnitudeIn('mm')} millimetres'); // 2370
+      '2 metres + 37 centimetres is ${sum.valueIn('mm')} millimetres'); // 2370
 
   final Length difference = l1 - l2;
   print(
-      '2 metres - 37 centimetres is ${difference.magnitudeIn('ft')} feet'); // 5.347769
+      '2 metres - 37 centimetres is ${difference.valueIn('ft')} feet'); // 5.347769
 
   final bool l1EQl2 = l1 == l2;
   print('2 metres == 37 centimetres is $l1EQl2'); // false

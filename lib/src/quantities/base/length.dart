@@ -5,12 +5,11 @@ import 'base_unit.dart';
 
 /// Represents base quantity Length
 class Length extends BaseQuantity<Length> {
-  /// Constructs Length with the magnitude and the unit
-  Length(num magnitude, String unitSymbol)
-      : super(magnitude, unitSymbol, L.dimension);
+  /// Constructs Length with the value and the unit
+  Length(num value, String unitSymbol) : super(value, unitSymbol, L.dimension);
 
-  /// Constructs Length with the magnitude in SI base unit
-  const Length.si(num magnitudeInSI) : super.si(magnitudeInSI, L.dimension);
+  /// Constructs Length with the value in SI base unit
+  const Length.si(num siValue) : super.si(siValue, L.dimension);
 }
 
 ///
@@ -124,7 +123,7 @@ class L extends BaseDimension<Length> {
         );
 
   @override
-  Length si(num magnitudeInSI) => Length.si(magnitudeInSI);
+  Length si(num siValue) => Length.si(siValue);
 
   ///
   static const L dimension = L._internal();

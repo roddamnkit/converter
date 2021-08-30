@@ -7,12 +7,11 @@ import 'unit.dart';
 
 /// Represents quantity Area
 class Area extends Quantity<Area> {
-  /// Constructs Area with the magnitude and the unit
-  Area(num magnitude, String unitSymbol)
-      : super(magnitude, unitSymbol, _A._dimension);
+  /// Constructs Area with the value and the unit
+  Area(num value, String unitSymbol) : super(value, unitSymbol, _A._dimension);
 
-  /// Constructs Area with the magnitude in SI unit
-  const Area.si(num magnitudeInSI) : super.si(magnitudeInSI, _A._dimension);
+  /// Constructs Area with the value in SI unit
+  const Area.si(num siValue) : super.si(siValue, _A._dimension);
 }
 
 class _A extends Dimension<Area> {
@@ -106,7 +105,7 @@ class _A extends Dimension<Area> {
         );
 
   @override
-  Area si(num magnitudeInSI) => Area.si(magnitudeInSI);
+  Area si(num siValue) => Area.si(siValue);
 
   static const _A _dimension = _A._internal();
 }

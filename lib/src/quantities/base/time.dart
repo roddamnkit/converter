@@ -5,12 +5,11 @@ import 'base_unit.dart';
 
 /// Represents base quantity Time
 class Time extends BaseQuantity<Time> {
-  /// Constructs Time with the magnitude and the unit
-  Time(num magnitude, String unitSymbol)
-      : super(magnitude, unitSymbol, T.dimension);
+  /// Constructs Time with the value and the unit
+  Time(num value, String unitSymbol) : super(value, unitSymbol, T.dimension);
 
-  /// Constructs Time with the magnitude in SI base unit
-  const Time.si(num magnitudeInSI) : super.si(magnitudeInSI, T.dimension);
+  /// Constructs Time with the value in SI base unit
+  const Time.si(num siValue) : super.si(siValue, T.dimension);
 }
 
 ///
@@ -142,7 +141,7 @@ class T extends BaseDimension<Time> {
         );
 
   @override
-  Time si(num magnitudeInSI) => Time.si(magnitudeInSI);
+  Time si(num siValue) => Time.si(siValue);
 
   ///
   static const T dimension = T._internal();
