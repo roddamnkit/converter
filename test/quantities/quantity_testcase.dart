@@ -35,3 +35,25 @@ final List<List<dynamic>> subtractTestCases = <List<dynamic>>[
   <dynamic>[Speed(2.997924, 'm/s'), Speed(3.353083, 'mi/h'), 1.498962],
   <dynamic>[Speed(1125, 'ft/s'), Speed(644, 'kn'), 11.597778],
 ];
+
+final List<List<Quantity<dynamic>>> eqTestCases = <List<Quantity<dynamic>>>[
+  // Length
+  <Length>[Length(2.5, 'm'), Length(250, 'cm')],
+  <Length>[Length(31.415926, 'Mm'), Length(3.1415926e17, 'Å')],
+
+  // Time
+  <Time>[Time(100, 'h'), Time(3.6e5, 's')],
+  <Time>[Time(32, 'y'), Time(11687.76, 'd')],
+
+  // Temperature
+  <Temperature>[Temperature(55, 'K'), Temperature(99, 'R')],
+  <Temperature>[Temperature(-40, 'F'), Temperature(233.15, 'K')],
+
+  // Area
+  <Area>[Area(0.75, 'km2'), Area(7.5e5, 'm2')],
+  <Area>[Area(3e4, 'm2'), Area(3, 'ha')],
+
+  // Speed
+  <Speed>[Speed(60, 'km/h'), Speed(50 / 3, 'm/s')],
+  <Speed>[Speed(2.5, 'm/s'), Speed(9, 'km/h')],
+];

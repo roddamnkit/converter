@@ -24,7 +24,7 @@ abstract class Quantity<Q extends Quantity<Q>> with EquatableMixin {
   Dimension<Q> get dimension => _dimension!;
 
   @override
-  List<Object> get props => <Object>[siValue, dimension];
+  List<Object> get props => <Object>[siValue.toDouble(), dimension];
 
   /// Returns the value of this quantity in [unitSymbol] unit
   num valueIn(String unitSymbol) => dimension.convert(siValue, to: unitSymbol);
@@ -48,7 +48,7 @@ abstract class Quantity<Q extends Quantity<Q>> with EquatableMixin {
   bool operator <=(Q q) => this < q || this == q;
 
   @override
-  String toString() => '$siValue $dimension';
+  String toString() => '$siValue ${dimension.siUnitSymbol}';
 }
 
 /// Superclass of all quantities' dimensions

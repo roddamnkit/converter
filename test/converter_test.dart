@@ -12,6 +12,7 @@ import 'quantities/speed_testcase.dart';
 void main() {
   testAdditions();
   testSubtractions();
+  testEQs();
   testConverters();
 }
 
@@ -19,7 +20,7 @@ void testAdditions() {
   addTestCases.forEach((List<dynamic> testCase) {
     final Quantity<dynamic> sum = testCase[0] + testCase[1];
 
-    test('sum.siValue -> ${testCase[2]}', () {
+    test('sum.siValue == ${testCase[2]}', () {
       expect(sum.siValue, fractionalCloseTo(testCase[2], 1e-6));
     });
   });
@@ -29,8 +30,16 @@ void testSubtractions() {
   subtractTestCases.forEach((List<dynamic> testCase) {
     final Quantity<dynamic> difference = testCase[0] - testCase[1];
 
-    test('difference.siValue -> ${testCase[2]}', () {
+    test('difference.siValue == ${testCase[2]}', () {
       expect(difference.siValue, fractionalCloseTo(testCase[2], 1e-6));
+    });
+  });
+}
+
+void testEQs() {
+  eqTestCases.forEach((List<Quantity<dynamic>> testCase) {
+    test('${testCase[0]} == ${testCase[1]}', () {
+      expect(testCase[0], equals(testCase[1]));
     });
   });
 }
@@ -50,12 +59,12 @@ void testConverter(Map<String, dynamic> converter) {
     final dynamic quantity = testCase['quantity'];
 
     group('$quantity', () {
-      test('siValue -> ${testCase['siValue']}', () {
+      test('siValue == ${testCase['siValue']}', () {
         expect(quantity.siValue, fractionalCloseTo(testCase['siValue'], 1e-6));
       });
 
       testCase['valueIn'].forEach((String unitSymbol, num value) {
-        test('valueIn($unitSymbol) -> $value', () {
+        test('valueIn($unitSymbol) == $value', () {
           expect(quantity.valueIn(unitSymbol), fractionalCloseTo(value, 1e-6));
         });
       });

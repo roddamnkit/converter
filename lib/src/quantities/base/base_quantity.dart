@@ -17,7 +17,7 @@ abstract class BaseQuantity<BQ extends BaseQuantity<BQ>> extends Quantity<BQ> {
   Dimension<BQ> get dimension => Dimension.base(baseDimension);
 
   @override
-  List<Object> get props => <Object>[siValue, baseDimension];
+  List<Object> get props => <Object>[siValue.toDouble(), baseDimension];
 
   @override
   num valueIn(String unitSymbol) =>
