@@ -13,6 +13,10 @@ void main() {
   testAdditions();
   testSubtractions();
   testEQs();
+  testGTs();
+  testLTs();
+  testGTEs();
+  testLTEs();
   testConverters();
 }
 
@@ -39,7 +43,45 @@ void testSubtractions() {
 void testEQs() {
   eqTestCases.forEach((List<Quantity<dynamic>> testCase) {
     test('${testCase[0]} == ${testCase[1]}', () {
-      expect(testCase[0], equals(testCase[1]));
+      expect(testCase[0] == testCase[1], equals(true));
+    });
+  });
+}
+
+void testGTs() {
+  gtTestCases.forEach((List<Quantity<dynamic>> testCase) {
+    test('${testCase[0]} > ${testCase[1]}', () {
+      expect(testCase[0] > testCase[1], equals(true));
+    });
+  });
+}
+
+void testLTs() {
+  ltTestCases.forEach((List<Quantity<dynamic>> testCase) {
+    test('${testCase[0]} < ${testCase[1]}', () {
+      expect(testCase[0] < testCase[1], equals(true));
+    });
+  });
+}
+
+void testGTEs() {
+  <List<Quantity<dynamic>>>[
+    ...gtTestCases,
+    ...eqTestCases,
+  ].forEach((List<Quantity<dynamic>> testCase) {
+    test('${testCase[0]} >= ${testCase[1]}', () {
+      expect(testCase[0] >= testCase[1], equals(true));
+    });
+  });
+}
+
+void testLTEs() {
+  <List<Quantity<dynamic>>>[
+    ...ltTestCases,
+    ...eqTestCases,
+  ].forEach((List<Quantity<dynamic>> testCase) {
+    test('${testCase[0]} <= ${testCase[1]}', () {
+      expect(testCase[0] <= testCase[1], equals(true));
     });
   });
 }

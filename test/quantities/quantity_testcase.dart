@@ -53,7 +53,63 @@ final List<List<Quantity<dynamic>>> eqTestCases = <List<Quantity<dynamic>>>[
   <Area>[Area(0.75, 'km2'), Area(7.5e5, 'm2')],
   <Area>[Area(3e4, 'm2'), Area(3, 'ha')],
 
+  // SolidAngle
+  <SolidAngle>[SolidAngle.si(2.5), SolidAngle(2.5, 'sr')],
+  <SolidAngle>[SolidAngle(12345, 'deg2'), SolidAngle(12345.0, 'deg2')],
+
   // Speed
   <Speed>[Speed(60, 'km/h'), Speed(50 / 3, 'm/s')],
   <Speed>[Speed(2.5, 'm/s'), Speed(9, 'km/h')],
+];
+
+final List<List<Quantity<dynamic>>> gtTestCases = <List<Quantity<dynamic>>>[
+  // Length
+  <Length>[Length(3.5, 'm'), Length(250, 'cm')],
+  <Length>[Length(31.415926, 'Gm'), Length(3.1415926e17, 'Å')],
+
+  // Time
+  <Time>[Time(101, 'h'), Time(3.6e5, 's')],
+  <Time>[Time(32, 'dec'), Time(11687.76, 'd')],
+
+  // Temperature
+  <Temperature>[Temperature(60, 'K'), Temperature(99, 'R')],
+  <Temperature>[Temperature(-39, 'F'), Temperature(233.15, 'K')],
+
+  // Area
+  <Area>[Area(0.8, 'km2'), Area(7.5e5, 'm2')],
+  <Area>[Area(3e4, 'dam2'), Area(3, 'ha')],
+
+  // SolidAngle
+  <SolidAngle>[SolidAngle.si(3.5), SolidAngle(2.5, 'sr')],
+  <SolidAngle>[SolidAngle(12345, 'sr'), SolidAngle(12345.0, 'deg2')],
+
+  // Speed
+  <Speed>[Speed(80, 'km/h'), Speed(50 / 3, 'm/s')],
+  <Speed>[Speed(4.9, 'kn'), Speed(9, 'km/h')],
+];
+
+final List<List<Quantity<dynamic>>> ltTestCases = <List<Quantity<dynamic>>>[
+  // Length
+  <Length>[Length(2.5, 'm'), Length(350, 'cm')],
+  <Length>[Length(31.415926, 'Mm'), Length(3.1415926e17, 'nm')],
+
+  // Time
+  <Time>[Time(100, 'h'), Time(3.7e5, 's')],
+  <Time>[Time(32, 'y'), Time(11687.76, 'wk')],
+
+  // Temperature
+  <Temperature>[Temperature(55, 'K'), Temperature(100, 'R')],
+  <Temperature>[Temperature(-40, 'F'), Temperature(234, 'K')],
+
+  // Area
+  <Area>[Area(0.75, 'km2'), Area(1e6, 'm2')],
+  <Area>[Area(3e4, 'm2'), Area(3, 'Mm2')],
+
+  // SolidAngle
+  <SolidAngle>[SolidAngle.si(2.5), SolidAngle(3.5, 'sr')],
+  <SolidAngle>[SolidAngle(12345, 'deg2'), SolidAngle(12345.0, 'sr')],
+
+  // Speed
+  <Speed>[Speed(60, 'km/h'), Speed(20, 'm/s')],
+  <Speed>[Speed(2.5, 'm/s'), Speed(8.5, 'ft/s')],
 ];
