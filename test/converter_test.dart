@@ -3,6 +3,7 @@ import 'package:test/test.dart';
 
 import 'quantities/area_testcase.dart';
 import 'quantities/base/length_testcase.dart';
+import 'quantities/base/mass_testcase.dart';
 import 'quantities/base/temperature_testcase.dart';
 import 'quantities/base/time_testcase.dart';
 import 'quantities/quantity_testcase.dart';
@@ -88,6 +89,7 @@ void testLTEs() {
 
 void testConverters() {
   testConverter(lengthConverter);
+  testConverter(massConverter);
   testConverter(temperatureConverter);
   testConverter(timeConverter);
 

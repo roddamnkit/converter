@@ -1,3 +1,9 @@
+## 0.3.1
+
+- Added quantities
+  - `Mass`
+- Quantity.(== > < >= <=) test cases
+
 ## 0.3.0
 
 - Changed `magnitude` to `value`

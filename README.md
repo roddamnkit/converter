@@ -59,6 +59,24 @@ final bool l1LTEl2 = l1 <= l2;
 - `mi` - mile
 - `nmi` - nautical mile
 
+### `Mass`
+- `kg` - kilogram (**SI**)
+- `hg` - hectogram
+- `dag` - decagram
+- `g` - gram
+- `dg` - decigram
+- `cg` - centigram
+- `mg` - milligram
+- `µg` - microgram
+- `ng` - nanogram
+- `Mg` - megagram
+- `Gg` - gigagram
+- `oz` - ounce
+- `lb` - pound
+- `t` - tonne *or* metric ton
+- `long-ton` | `ton` - long ton *or* imperial ton
+- `short-ton` - short ton
+
 ### `Time`
 - `s` - second (**SI**)
 - `ds` - decisecond
@@ -94,7 +112,7 @@ final bool l1LTEl2 = l1 <= l2;
 - `mm2` - square millimetre
 - `µm2` - square micrometre
 - `dam2` - square decametre
-- `hm2`|`ha` - square hectometre *or* hectare
+- `hm2` | `ha` - square hectometre *or* hectare
 - `km2` - square kilometre
 - `Mm2` - square megametre
 - `in2` - square inch
