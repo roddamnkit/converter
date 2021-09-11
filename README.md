@@ -120,6 +120,16 @@ final bool l1LTEl2 = l1 <= l2;
 - `mi2` - square mile
 - `ac` - acre
 
+### `Frequency`
+- `Hz` - hertz (**SI**)
+- `kHz` - kilohertz
+- `MHz` - megahertz
+- `GHz` - gigahertz
+- `THz` - terahertz
+- `rad/s` - radian per second
+- `deg/s` - degree per second
+- `rpm` - revolutions per minute
+
 ### `SolidAngle`
 - `sr` - steradian (**SI**)
 - `deg2` - square degree

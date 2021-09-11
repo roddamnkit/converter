@@ -1,3 +1,8 @@
+## 0.3.2
+
+- Added quantities
+  - `Frequency`
+
 ## 0.3.1
 
 - Added quantities
