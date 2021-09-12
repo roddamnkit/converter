@@ -11,6 +11,7 @@ A Dart library for converting between different units of measurement for various
 
 See `example/main.dart`
 
+#### `Length`
 ```dart
 final Length l1 = Length(2, 'm'); // 2 metres
 final Length l2 = Length(37, 'cm'); // 37 centimetres
@@ -36,6 +37,34 @@ final bool l1GTl2 = l1 > l2;
 
 final bool l1LTEl2 = l1 <= l2;
 // l1LTEl2 == false
+```
+
+#### `Time`
+```dart
+final Time t1 = Time.si(86400); // 86400 seconds
+final Time t2 = Time(24, 'h'); // 24 hours
+final Time t3 = Time(1500, 'min'); // 1500 minutes
+
+final num t3ValueInDays = t3.valueIn('d');
+// t3ValueInDays ~= 1.041667
+
+final Time sum = t1 + t2;
+// sum == 2880 minutes
+
+final Time difference = t3 - t2;
+// difference == 3600 seconds
+
+final bool t1EQt2 = t1 == t2;
+// t1EQt2 == true
+
+final bool t2EQt3 = t2 == t3;
+// t2EQt3 == false
+
+final bool t3GTt2 = t3 > t2;
+// t3GTt2 == true
+
+final bool t3LTEt2 = t3 <= t2;
+// t3LTEt2 == false
 ```
 
 ## Supported quantities and units

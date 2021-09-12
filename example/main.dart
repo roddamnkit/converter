@@ -2,6 +2,8 @@ import 'package:converter/converter.dart';
 
 void main() {
   length();
+  print('\n');
+  time();
 }
 
 void length() {
@@ -31,4 +33,31 @@ void length() {
 
   final bool l1LTEl2 = l1 <= l2;
   print('2 metres <= 37 centimetres is $l1LTEl2'); // false
+}
+
+void time() {
+  final Time t1 = Time.si(86400); // 86400 seconds
+  final Time t2 = Time(24, 'h'); // 24 hours
+  final Time t3 = Time(1500, 'min'); // 1500 minutes
+
+  final num t3ValueInDays = t3.valueIn('d');
+  print('1500 minutes is $t3ValueInDays days'); // 1.041667
+
+  final Time sum = t1 + t2;
+  print('86400 seconds + 24 hours is ${sum.valueIn('min')} minutes'); // 2880
+
+  final Time difference = t3 - t2;
+  print('1500 minutes - 24 hours is ${difference.siValue} seconds'); // 3600
+
+  final bool t1EQt2 = t1 == t2;
+  print('86400 seconds == 24 hours is $t1EQt2'); // true
+
+  final bool t2EQt3 = t2 == t3;
+  print('24 hours == 1500 minutes is $t2EQt3'); // false
+
+  final bool t3GTt2 = t3 > t2;
+  print('1500 minutes > 24 hours is $t3GTt2'); // true
+
+  final bool t3LTEt2 = t3 <= t2;
+  print('1500 minutes <= 24 hours is $t3LTEt2'); // false
 }
