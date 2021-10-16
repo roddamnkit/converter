@@ -1,5 +1,5 @@
 name: converter
-version: 0.3.2+1
+version: 0.3.3
 description: A Dart library for converting between different units of measurement for various quantities
 repository: https://github.com/dkin-om/converter-dart.git
 issue_tracker: https://github.com/dkin-om/converter-dart/issues

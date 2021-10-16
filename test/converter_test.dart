@@ -6,6 +6,7 @@ import 'quantities/base/length_testcase.dart';
 import 'quantities/base/mass_testcase.dart';
 import 'quantities/base/temperature_testcase.dart';
 import 'quantities/base/time_testcase.dart';
+import 'quantities/force_testcase.dart';
 import 'quantities/frequency_testcase.dart';
 import 'quantities/quantity_testcase.dart';
 import 'quantities/solid_angle_testcase.dart';
@@ -95,6 +96,7 @@ void testConverters() {
   testConverter(timeConverter);
 
   testConverter(areaConverter);
+  testConverter(forceConverter);
   testConverter(frequencyConverter);
   testConverter(solidAngleConverter);
   testConverter(speedConverter);

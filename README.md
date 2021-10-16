@@ -149,6 +149,14 @@ final bool t3LTEt2 = t3 <= t2;
 - `mi2` - square mile
 - `ac` - acre
 
+### `Force`
+- `N` - newton (**SI**)
+- `dyn` - dyne
+- `gf` - gram-force
+- `kgf` - kilogram-force
+- `lbf` - pound-force
+- `pdl` - poundal
+
 ### `Frequency`
 - `Hz` - hertz (**SI**)
 - `kHz` - kilohertz

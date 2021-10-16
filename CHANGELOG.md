@@ -1,3 +1,8 @@
+## 0.3.3
+
+- Added quantities
+  - `Force`
+
 ## 0.3.2+1
 
 - Updated `example/main.dart` and `README.md`
