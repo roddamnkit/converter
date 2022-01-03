@@ -128,6 +128,13 @@ final bool t3LTEt2 = t3 <= t2;
 - `dec` - decade
 - `c` - century
 
+### `ElectricCurrent`
+- `A` - ampere (**SI**)
+- `mA` - milliampere
+- `kA` - kiloampere
+- `statA` - statampere
+- `abA` | `Bi` - abampere *or* biot
+
 ### `Temperature`
 - `K` - kelvin (**SI**)
 - `C` - degree Celsius
@@ -148,6 +155,16 @@ final bool t3LTEt2 = t3 <= t2;
 - `ft2` - square foot
 - `mi2` - square mile
 - `ac` - acre
+
+### `ElectricCharge`
+- `C` - coulomb (**SI**)
+- `mC` - millicoulomb
+- `µC` - microcoulomb
+- `nC` - nanocoulomb
+- `Ah` - ampere hour
+- `mAh` - milliampere hour
+- `statC` | `Fr` - statcoulomb *or* franklin
+- `abC` - abcoulomb
 
 ### `Force`
 - `N` - newton (**SI**)

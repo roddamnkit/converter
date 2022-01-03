@@ -1,3 +1,9 @@
+## 0.3.4
+
+- Added quantities
+  - `ElectricCurrent`
+  - `ElectricCharge`
+
 ## 0.3.3
 
 - Added quantities

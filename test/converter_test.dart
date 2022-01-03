@@ -2,10 +2,12 @@ import 'package:converter/converter.dart';
 import 'package:test/test.dart';
 
 import 'quantities/area_testcase.dart';
+import 'quantities/base/electric_current_testcase.dart';
 import 'quantities/base/length_testcase.dart';
 import 'quantities/base/mass_testcase.dart';
 import 'quantities/base/temperature_testcase.dart';
 import 'quantities/base/time_testcase.dart';
+import 'quantities/electric_charge_testcase.dart';
 import 'quantities/force_testcase.dart';
 import 'quantities/frequency_testcase.dart';
 import 'quantities/quantity_testcase.dart';
@@ -90,12 +92,14 @@ void testLTEs() {
 }
 
 void testConverters() {
+  testConverter(electricCurrentConverter);
   testConverter(lengthConverter);
   testConverter(massConverter);
   testConverter(temperatureConverter);
   testConverter(timeConverter);
 
   testConverter(areaConverter);
+  testConverter(electricChargeConverter);
   testConverter(forceConverter);
   testConverter(frequencyConverter);
   testConverter(solidAngleConverter);
