@@ -10,3 +10,4 @@ export 'src/quantities/frequency.dart' show Frequency;
 export 'src/quantities/quantity.dart' show Quantity;
 export 'src/quantities/solid_angle.dart' show SolidAngle;
 export 'src/quantities/speed.dart' show Speed;
+export 'src/quantities/volume.dart' show Volume;

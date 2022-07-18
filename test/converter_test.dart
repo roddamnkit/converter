@@ -13,6 +13,7 @@ import 'quantities/frequency_testcase.dart';
 import 'quantities/quantity_testcase.dart';
 import 'quantities/solid_angle_testcase.dart';
 import 'quantities/speed_testcase.dart';
+import 'quantities/volume_testcase.dart';
 
 void main() {
   testAdditions();
@@ -104,6 +105,7 @@ void testConverters() {
   testConverter(frequencyConverter);
   testConverter(solidAngleConverter);
   testConverter(speedConverter);
+  testConverter(volumeConverter);
 }
 
 void testConverter(Map<String, dynamic> converter) {

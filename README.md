@@ -1,7 +1,7 @@
 # converter - Convert between different units of measurement
 
 [![Version](https://img.shields.io/pub/v/converter)](https://pub.dev/packages/converter)
-[![Build Status](https://travis-ci.com/dkin-om/converter-dart.svg?branch=master)](https://travis-ci.com/dkin-om/converter-dart)
+[![Build Status](https://travis-ci.com/dkin-om/converter-dart.svg?branch=master)](https://app.travis-ci.com/github/dkin-om/converter-dart)
 [![Coverage Status](https://coveralls.io/repos/github/dkin-om/converter-dart/badge.svg)](https://coveralls.io/github/dkin-om/converter-dart)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/dkin-om/converter-dart/blob/master/LICENSE)
 
@@ -194,6 +194,24 @@ final bool t3LTEt2 = t3 <= t2;
 - `ft/s` - foot per second
 - `mi/h` - mile per hour
 - `kn` - knot
+
+### `Volume`
+- `m3` | `kl` - cubic metre *or* kilolitre (**SI**)
+- `dm3` | `l` - cubic decimetre *or* litre
+- `cm3` | `ml` - cubic centimetre *or* millilitre
+- `mm3` | `µl` - cubic millimetre *or* microlitre
+- `dam3` | `Ml` - cubic decametre *or* megalitre
+- `hm3` | `Gl` - cubic hectometre *or* gigalitre
+- `km3` | `Tl` - cubic kilometre *or* teralitre
+- `in3` - cubic inch
+- `ft3` - cubic foot
+- `mi3` - cubic mile
+- `gal` - gallon
+- `qt` - quart
+- `pt` - pint
+- `fl-oz` - fluid ounce
+- `tbsp` - tablespoon
+- `tsp` - teaspoon
 
 ## Syntax
 

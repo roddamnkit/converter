@@ -1,3 +1,8 @@
+## 0.3.5
+
+- Added quantities
+  - `Volume`
+
 ## 0.3.4
 
 - Added quantities
