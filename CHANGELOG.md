@@ -1,3 +1,8 @@
+## 0.3.6
+
+- Added quantities
+  - `PlaneAngle`
+
 ## 0.3.5
 
 - Added quantities

@@ -7,6 +7,7 @@ export 'src/quantities/base/time.dart' show Time;
 export 'src/quantities/electric_charge.dart' show ElectricCharge;
 export 'src/quantities/force.dart' show Force;
 export 'src/quantities/frequency.dart' show Frequency;
+export 'src/quantities/plane_angle.dart' show PlaneAngle;
 export 'src/quantities/quantity.dart' show Quantity;
 export 'src/quantities/solid_angle.dart' show SolidAngle;
 export 'src/quantities/speed.dart' show Speed;

@@ -10,6 +10,7 @@ import 'quantities/base/time_testcase.dart';
 import 'quantities/electric_charge_testcase.dart';
 import 'quantities/force_testcase.dart';
 import 'quantities/frequency_testcase.dart';
+import 'quantities/plane_angle_testcase.dart';
 import 'quantities/quantity_testcase.dart';
 import 'quantities/solid_angle_testcase.dart';
 import 'quantities/speed_testcase.dart';
@@ -103,6 +104,7 @@ void testConverters() {
   testConverter(electricChargeConverter);
   testConverter(forceConverter);
   testConverter(frequencyConverter);
+  testConverter(planeAngleConverter);
   testConverter(solidAngleConverter);
   testConverter(speedConverter);
   testConverter(volumeConverter);

@@ -1,5 +1,7 @@
 # converter - Convert between different units of measurement
 
+[![Converter](https://raw.githubusercontent.com/dkin-om/converter-dart/master/.img/converter.png)](https://github.com/dkin-om/converter-dart)
+
 [![Version](https://img.shields.io/pub/v/converter)](https://pub.dev/packages/converter)
 [![Build Status](https://travis-ci.com/dkin-om/converter-dart.svg?branch=master)](https://app.travis-ci.com/github/dkin-om/converter-dart)
 [![Coverage Status](https://coveralls.io/repos/github/dkin-om/converter-dart/badge.svg)](https://coveralls.io/github/dkin-om/converter-dart)
@@ -183,6 +185,14 @@ final bool t3LTEt2 = t3 <= t2;
 - `rad/s` - radian per second
 - `deg/s` - degree per second
 - `rpm` - revolutions per minute
+
+### `PlaneAngle`
+- `rad` - radian (**SI**)
+- `mrad` - milliradian
+- `deg` - degree
+- `arcmin` - arcminute
+- `arcsec` - arcsecond
+- `grad` - gradian
 
 ### `SolidAngle`
 - `sr` - steradian (**SI**)
