@@ -1,11 +1,11 @@
 # converter - Convert between different units of measurement
 
-[![Converter](https://raw.githubusercontent.com/dkin-om/converter-dart/master/.img/converter.png)](https://github.com/dkin-om/converter-dart)
+[![Converter](https://raw.githubusercontent.com/roddamnkit/converter/master/img/.converter.png)](https://github.com/roddamnkit/converter)
 
 [![Version](https://img.shields.io/pub/v/converter)](https://pub.dev/packages/converter)
-[![Build Status](https://travis-ci.com/dkin-om/converter-dart.svg?branch=master)](https://app.travis-ci.com/github/dkin-om/converter-dart)
-[![Coverage Status](https://coveralls.io/repos/github/dkin-om/converter-dart/badge.svg)](https://coveralls.io/github/dkin-om/converter-dart)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/dkin-om/converter-dart/blob/master/LICENSE)
+[![Build Status](https://github.com/roddamnkit/converter/actions/workflows/.github/workflows/dart.yml/badge.svg?branch=master)](https://github.com/roddamnkit/converter/actions)
+[![Coverage Status](https://coveralls.io/repos/github/roddamnkit/converter/badge.svg)](https://coveralls.io/github/roddamnkit/converter)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/roddamnkit/converter/blob/master/LICENSE)
 
 A Dart library for converting between different units of measurement for various quantities
 
@@ -229,4 +229,4 @@ See [documentation](https://pub.dev/documentation/converter) for more
 
 ## License
 
-[MIT](https://github.com/dkin-om/converter-dart/blob/master/LICENSE)
+[MIT](https://github.com/roddamnkit/converter/blob/master/LICENSE)

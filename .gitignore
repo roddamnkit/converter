@@ -1,4 +1,4 @@
-##### https://github.com/github/gitignore/blob/218a941be92679ce67d0484547e3e142b2f5f6f0/Dart.gitignore #####
+##### https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Dart.gitignore #####
 
 # See https://www.dartlang.org/guides/libraries/private-files
 
@@ -12,6 +12,9 @@ pubspec.lock
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
 doc/api/
+
+# dotenv environment variables file
+.env*
 
 # Avoid committing generated Javascript files:
 *.dart.js
