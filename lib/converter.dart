@@ -1,3 +1,4 @@
+export 'src/quantities/acceleration.dart' show Acceleration;
 export 'src/quantities/area.dart' show Area;
 export 'src/quantities/base/electric_current.dart' show ElectricCurrent;
 export 'src/quantities/base/length.dart' show Length;

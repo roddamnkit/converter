@@ -20,7 +20,9 @@ class _V extends Dimension<Volume> {
 
   const _V._internal()
       : super(
-          const <BaseDimension<dynamic>, num>{L.dimension: 3},
+          const <BaseDimension<dynamic>, num>{
+            L.dimension: 3,
+          },
           siUnitSymbol: 'm3',
           allUnits: const <String, Unit>{
             'm3': Unit('cubic metre', toSI: <InvertibleRealFunction>[]),

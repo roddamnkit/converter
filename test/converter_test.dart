@@ -1,6 +1,7 @@
 import 'package:converter/converter.dart';
 import 'package:test/test.dart';
 
+import 'quantities/acceleration_testcase.dart';
 import 'quantities/area_testcase.dart';
 import 'quantities/base/electric_current_testcase.dart';
 import 'quantities/base/length_testcase.dart';
@@ -100,6 +101,7 @@ void testConverters() {
   testConverter(temperatureConverter);
   testConverter(timeConverter);
 
+  testConverter(accelerationConverter);
   testConverter(areaConverter);
   testConverter(electricChargeConverter);
   testConverter(forceConverter);

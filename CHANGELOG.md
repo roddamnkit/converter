@@ -1,7 +1,7 @@
 ## 0.4.0
 
 - Added quantities
-  - ``
+  - `Acceleration`
 
 ## 0.3.6
 

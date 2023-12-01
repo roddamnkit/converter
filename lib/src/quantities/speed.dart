@@ -20,7 +20,10 @@ class _S extends Dimension<Speed> {
 
   const _S._internal()
       : super(
-          const <BaseDimension<dynamic>, num>{L.dimension: 1, T.dimension: -1},
+          const <BaseDimension<dynamic>, num>{
+            L.dimension: 1,
+            T.dimension: -1,
+          },
           siUnitSymbol: 'm/s',
           allUnits: const <String, Unit>{
             'm/s': Unit('metre per second', toSI: <InvertibleRealFunction>[]),

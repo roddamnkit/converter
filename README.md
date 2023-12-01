@@ -143,6 +143,12 @@ final bool t3LTEt2 = t3 <= t2;
 - `F` - degree Fahrenheit
 - `R` - degree Rankine
 
+### `Acceleration`
+- `m/s2` - metre per second squared (**SI**)
+- `cm/s2` | `gal` - centimetre per second squared *or* galileo
+- `ft/s2` - foot per second squared
+- `g` - standard gravity
+
 ### `Area`
 - `m2` - square metre (**SI**)
 - `dm2` - square decimetre

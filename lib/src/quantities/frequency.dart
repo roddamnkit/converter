@@ -22,7 +22,9 @@ class _F extends Dimension<Frequency> {
 
   const _F._internal()
       : super(
-          const <BaseDimension<dynamic>, num>{T.dimension: -1},
+          const <BaseDimension<dynamic>, num>{
+            T.dimension: -1,
+          },
           siUnitSymbol: 'Hz',
           allUnits: const <String, Unit>{
             'Hz': Unit('hertz', toSI: <InvertibleRealFunction>[]),

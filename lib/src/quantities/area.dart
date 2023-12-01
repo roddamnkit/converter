@@ -19,7 +19,9 @@ class _A extends Dimension<Area> {
 
   const _A._internal()
       : super(
-          const <BaseDimension<dynamic>, num>{L.dimension: 2},
+          const <BaseDimension<dynamic>, num>{
+            L.dimension: 2,
+          },
           siUnitSymbol: 'm2',
           allUnits: const <String, Unit>{
             'm2': Unit('square metre', toSI: <InvertibleRealFunction>[]),
