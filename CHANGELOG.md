@@ -1,3 +1,8 @@
+## 0.3.7
+
+- Added quantities
+  - ``
+
 ## 0.3.6
 
 - Added quantities
